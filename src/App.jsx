@@ -20,6 +20,8 @@ function App() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div>
+      <h3 className='text-center text-green-700 my-5 text-3xl font-bold'>ReactJS MCQ game app</h3>
       <div className="bg-white p-8 rounded shadow-lg">
       {
           questions.length === currentQuestion + 1 && (
@@ -32,6 +34,7 @@ function App() {
         }
         {currentQuestion < questions.length - 1 ? (
           <Question
+          number = {currentQuestion + 1}
             question={questions[currentQuestion]}
             onAnswer={handleAnswer}
           />
@@ -42,6 +45,7 @@ function App() {
         )
         }
       </div>
+    </div>
     </div>
   );
 }

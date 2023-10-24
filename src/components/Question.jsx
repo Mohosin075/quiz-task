@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
-function Question({ question, onAnswer }) {
+function Question({ question, onAnswer , number}) {
+  console.log(number);
   return (
     <div>
+      <div className="text-xl">{number}/10</div>
       <h1 className="text-2xl font-bold mb-4">{question.question}</h1>
       <div>
         {question.options.map((option, index) => (
